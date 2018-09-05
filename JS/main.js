@@ -1,21 +1,22 @@
 var canvas = document.getElementById('full-canvas');
 var ctx= canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
 //Clases
 
 class Cookie{
    
     constructor (){
-        this.x=0;
-        this.y=445;
-        this.width=300;
-        this.height=600;
+        this.x=40;
+        this.y=440;
+        this.width=143;
+        this.height=208;
         this.image1 = new Image ();
         this.image1.src = 'https://image.ibb.co/kL2AKe/stand.png';
     }
 
     draw(){
-        
         ctx.drawImage(this.image1, this.x, this.y, this.width, this.height);
     }
 
@@ -24,15 +25,16 @@ class Cookie{
 
 class Background{
     constructor(){
-        this.x=0;
-        this.y=-445;
-        this.width = 300;
-        this.height = 600;
+        this.x= 0;
+        this.y= -2205;
+        this.width = 1300;
+        this.height = 2890;
         this.image = new Image();
         this.image.src = 'https://image.ibb.co/hRwHXz/Background.png';
     }
 
     draw(){
+        // ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
         ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
     }
 }
@@ -75,15 +77,16 @@ var frames = 0;
 var interval = setInterval(function(){
     frames++;
    ctx.clearRect(0,0,400,200)
-   //fondo.draw();
+   fondo.draw();
    cookie.draw();
 }, 1000/60);
 
 
 addEventListener("keydown", function(event){
     if(event.keyCode == 38){
-        cookie.y -= 80;
+        cookie.y -= 30;
     }
+    //hacer el cambio de lado con un switch cookie.x += 5;
 })
 
 function start (){
