@@ -12,3 +12,25 @@
   html {
     overflow-y: hidden;
   }
+
+  body{
+    text-align: center;
+    background: #fff;
+    font-family: sans-serif;
+  }
+  
+  #clockdiv{
+    font-family: sans-serif;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    font-size: 40px;
+    align: center;
+  }
+  
+  #clockdiv > div{
+    padding: 20px;
+    border-radius: 40px;
+    background-color: #666;
+    display: inline-block;
+  }
