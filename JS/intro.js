@@ -1,11 +1,16 @@
-document.getElementById("full-canvas").onLoad = function(){
-    offsetTop = document.getElementById("full-canvas").height / 2;
-    offsetLeft = document.getElementById("full-canvasC").width / 2;
-    document.getElementById("full-canvas").style.marginTop="-"+offsetTop+"px";
-    document.getElementById("full-canvas").style.marginLeft="-"+offsetLeft+"px";
-  }
+class Cover{
+    constructor(){
+        this.x= 0;
+        this.y=-15;
+        this.width = 1300;
+        this.height = 700;
+        this.image = new Image();
+        this.image.src = 'https://image.ibb.co/e5t3Up/cover1.png';
+    }
 
-  function FULL_IMAGE(fimage){
-    document.getElementById("full-canvas").src=fimage;
-    document.getElementById("full-canvas").style.display="block";
-  }
+    draw(){
+        ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
+    }
+}
+
+var intro = new Cover();

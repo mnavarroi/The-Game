@@ -9,6 +9,10 @@
     background-color: silver;
   }
 
+/* #intro{
+    text-align: center;
+} */
+
   html {
     overflow-y: hidden;
   }
@@ -25,7 +29,6 @@
     font-weight: 600;
     text-align: center;
     font-size: 40px;
-    align: center;
   }
   
   #clockdiv > div{
