@@ -1,9 +1,43 @@
-var platos = [
-    { x: 250, y: 135 },
-    { x: 256, y: 167 },
-    { x: 35, y: 446}
+var posicionPlatos = [
+    //x horizontal y vertical se va a ir a menos (-)
+    {x:150, y: 400},
+    {x:650, y: 280},
+    {x:880, y:130},
+    {x:400, y:60},
+    {x:5, y:5},
+    
+    
+    // { X: 600, Y: -26 }
 ]
 
+var platos = [
+    { src: 'https://image.ibb.co/h9eRCz/plato1.png' },
+    { src: 'https://image.ibb.co/ntOmCz/plato2.png' },
+    { src: 'https://image.ibb.co/mkUhkK/plato3.png'}
+]
+
+class Plato{
+    constructor (){
+        this.x=0;
+        this.y=0;
+        this.width=300;
+        this.height=30;
+        this.image = new Image ();
+        this.image.src = 'https://image.ibb.co/h9eRCz/plato1.png';
+
+    }
+
+    draw(){
+        if(frames % 10 === 0) this.x -= 0;
+        posicionPlatos.forEach(p => {
+            //this.image.src = platos[Math.floor(Math.random() * (platos.length - 1)) + 1].src
+            ctx.drawImage(this.image, p.x, p.y, this.width, this.height);
+        })
+    }
+}
+var plato = new Plato();
+
+/*
 class Platoamarillo{
     constructor (){
         this.x=800;
@@ -88,4 +122,4 @@ class Platoazul{
     }
 }
 
-var platosazules = new Platoazul();
+var platosazules = new Platoazul();*/

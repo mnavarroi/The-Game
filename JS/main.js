@@ -78,13 +78,7 @@ var controller = {
       cookie.x = 0 - 143;
    }
    
-      // si el plato rojo se pasa de la pantalla del lado izquierdo
-      if (platosrojos.x < 0 - 500) { //el 500 es el ancho del plato de la imagen
-        platosrojos.x = canvas.width; //Tamaño del width del canvas
-      }
-      if (platosrojos.x > canvas.width) {// si plato rojo se pasa de la pantalla del lado derecho
-        platosrojos.x = 0 - 500;
-     }
+     
    
   
     // call update when the browser is ready to draw again
@@ -111,10 +105,11 @@ function start(){
     interval = setInterval(function(){
         // frames++; //Tal vez esta línea no sirva
        fondo.draw();
-       platosamarillos.draw();
+       /*platosamarillos.draw();
        platosrojos.draw();
        platosverdes.draw();
-       platosazules.draw();
+       platosazules.draw();*/
+       plato.draw();
        cookie.draw();
        intro.draw();
        ctx.font = "200 28px Verdana"
