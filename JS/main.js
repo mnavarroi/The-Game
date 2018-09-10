@@ -31,10 +31,10 @@ var loop = function() {
     cookie.y_velocity *= 0.9;// fricción
   
     // línea base
-    if (cookie.y > 510 - 38 - 40) {
+    if (cookie.y > 530 - 38 - 40) {
   
       cookie.jumping = false;
-      cookie.y = 510 - 38 - 40;
+      cookie.y = 530 - 38 - 40;
       cookie.y_velocity = 0;
   
     }
@@ -73,18 +73,13 @@ window.requestAnimationFrame(loop);
 function start(){
     interval = setInterval(function(){
         // frames++; //Tal vez esta línea no sirva
-       fondo.draw();
-       /*platosamarillos.draw();
-       platosrojos.draw();
-       platosverdes.draw();
-       platosazules.draw();*/
+        
+        fondo.draw();
+        flecha.draw(); 
        plato.draw();
        cookie.draw();
-       intro.draw();
-       ctx.font = "200 28px Verdana"
-       ctx.fillStyle = "#604035";
-       ctx.fillText("Press Enter to start", 510, 620)
-       
+    //    chispa.draw();
+           
     }, 1000/60);
 }
 

@@ -1,10 +1,11 @@
 var posicionPlatos = [
     //x horizontal y vertical se va a ir a menos (-)
-    {x:150, y: 400},
+    {x:200, y: 400},
     {x:650, y: 280},
     {x:880, y:130},
     {x:400, y:60},
     {x:5, y:5},
+    {x:20, y:-25},
     
     
     // { X: 600, Y: -26 }
