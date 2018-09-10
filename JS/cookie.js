@@ -12,12 +12,14 @@ class Cookie{
         this.image1.src = 'https://image.ibb.co/kL2AKe/stand.png';
     }
 
-    collision(item){
-        return (this.x < item.x + item.width) &&
-            (this.x + this.width > item.x) &&
-            (this.y < item.y + item.height) &&
-            (this.y + this.height > item.y);
-    }
+    collisionPlatform(item) {
+        if (this.y + this.height <= item.y) {
+          return false;
+        }
+        if (this.x <= x + 64 && this.x >= item.x) {
+          return true;
+        }
+      }
 
     draw(){
         ctx.drawImage(this.image1, this.x, this.y, this.width, this.height);

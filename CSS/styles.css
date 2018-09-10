@@ -1,39 +1,136 @@
 * {
     margin: 0;
     padding: 0;
-  }
-/* body {
-   
-} */
-#full-canvas {
-    background-color: silver;
-  }
+}
 
-/* #intro{
-    text-align: center;
-} */
-
-  html {
+html {
     overflow-y: hidden;
-  }
+}
 
-  body{
+body {
     text-align: center;
-    background: #fff;
-    font-family: sans-serif;
-  }
-  
-  #clockdiv{
-    font-family: sans-serif;
-    color: #fff;
-    font-weight: 600;
+    background: url("https://image.ibb.co/dvfeN9/background.png");
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+}
+
+p{
+    color:grey;
+    letter-spacing: 2px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size:12px;
+    padding: 5%;
+}
+
+h3{
+    color:#464646;
+    letter-spacing: 1px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size:24px;
+}
+
+.logo{
+    display:flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.gif{
+    margin-top: -260px;
+}
+
+.circle{
+    height: 280px;
+  width: 280px;
+  background-color:white;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top:30px;
+}
+
+#botones{
+    width: 35%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 70px;
+}
+
+.boton {
+	background-color:rgb(78, 45, 21);
+	border-radius: 0.7em;
+	cursor:pointer;
+    color:white;
+    letter-spacing: 2px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:16px;
+	padding:14px 70px;
+    border: none;
+    margin-bottom: 15px;
+}
+
+.boton:hover {
+	background-color:#d3671f;
+}
+
+.boton:active {
+    background-color:#b3500f;
+}
+
+#como_jugar {
+    background-color:white;
+    opacity: 0.8;
+    color: rgb(61, 34, 14);
+    border-radius: 0.6em;
+	cursor:pointer;
+    letter-spacing: 1px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:12px;
+    padding:4px 20px;
+    border:none;
+}
+
+#como_jugar:hover {
+    color: #d3671f;
+    background-color: white;
+    opacity: 0.7;
+}
+
+#como_jugar:active {
+    color: rgb(61, 34, 14);
+    opacity: 0.6;
+}
+
+.instrucciones-modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal-contenido{
+    width:300px;
+    height:450px;
+    background-color:rgb(255,255,255,0.95);
+    border-radius: 8px;
     text-align: center;
-    font-size: 40px;
-  }
-  
-  #clockdiv > div{
     padding: 20px;
-    border-radius: 40px;
-    background-color: #666;
-    display: inline-block;
-  }
+    position: relative;
+}
+
+.close{
+  position: absolute;
+  top: 8px;
+  right: 14px;
+  font-size:38px;
+  transform: rotate(45deg);
+  color: grey;
+  cursor: pointer;
+}

@@ -10,11 +10,11 @@ var posicionPlatos = [
     // { X: 600, Y: -26 }
 ]
 
-var platos = [
-    { src: 'https://image.ibb.co/h9eRCz/plato1.png' },
-    { src: 'https://image.ibb.co/ntOmCz/plato2.png' },
-    { src: 'https://image.ibb.co/mkUhkK/plato3.png'}
-]
+// var platos = [
+//     { src: 'https://image.ibb.co/h9eRCz/plato1.png' },
+//     { src: 'https://image.ibb.co/ntOmCz/plato2.png' },
+//     { src: 'https://image.ibb.co/mkUhkK/plato3.png'}
+// ]
 
 class Plato{
     constructor (){
@@ -26,6 +26,24 @@ class Plato{
         this.image.src = 'https://image.ibb.co/h9eRCz/plato1.png';
 
     }
+    
+//     platforms() {
+//         posicionPlatos.forEach(elem => {
+//           this.x = elem.x;
+//           this.y = elem.y;
+//           this.image = new Image();
+//           this.image.src = elem.imageSrc;
+//           if (
+//             cookie.collisionPlatform(this.x, this.y) &&
+//             cookie.y + cookie.height < this.y + cookie.gravity
+//           ) {
+//             cookie.gravity = 0;
+//             cookie.jumping = false;
+//             cookie.y = this.y - cookie.height;
+//           }
+//         }
+// }
+
 
     draw(){
         if(frames % 10 === 0) this.x -= 0;

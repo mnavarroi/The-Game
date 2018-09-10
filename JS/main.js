@@ -5,39 +5,8 @@ canvas.height = window.innerHeight;
 
 var frames = 0;
 
-//Parte de los controles
-
-var controller = {
-
-    left:false,
-    right:false,
-    up:false,
-    keyListener:function(event) {
-  
-      var key_state = (event.type == "keydown")?true:false;
-  
-      
-      switch(event.keyCode) {
-  
-        case 37:// izquierda
-          controller.left = key_state;
-        break;
-        case 38:// arriba
-          controller.up = key_state;
-        break;
-        case 39:// derecha
-          controller.right = key_state;
-        break;
-  
-      }
-  
-    }
-  
-  };
-  
-
-  //El loop
-  var loop = function() {
+//El loop
+var loop = function() {
   
     if (controller.up && cookie.jumping == false) {
   
@@ -81,14 +50,14 @@ var controller = {
      
    
   
-    // call update when the browser is ready to draw again
-    window.requestAnimationFrame(loop);
+// call update when the browser is ready to draw again
+window.requestAnimationFrame(loop);
   
-  };
+};
   
-  window.addEventListener("keydown", controller.keyListener)
-  window.addEventListener("keyup", controller.keyListener);
-  window.requestAnimationFrame(loop);
+window.addEventListener("keydown", controller.keyListener)
+window.addEventListener("keyup", controller.keyListener);
+window.requestAnimationFrame(loop);
 
 
 
@@ -133,6 +102,18 @@ function gameOver(){
     ctx.fillText("The chocolate melted", 250, 200)
     ctx.fillText("Press R to help Crispy again", 250, 240);
 }
+
+
+/*//draw Victory
+if(status === 'win'){
+    ctx.fillStyle = '#000';
+    ctx.fillRect(0, 0, width, height);
+    ctx.fillStyle = '#fff';
+    ctx.font = '20pt Helvetica';
+    ctx.textAlign = 'center';
+    ctx.fillText("VICTORY", width/2, height/2);
+    ctx.fillText("Press Space to Retry", width/2, height/2 + 40);
+}*/
 
 //ejemplo
 // addEventListener('keydown', function(event){
