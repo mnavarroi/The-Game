@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-y: hidden;
+}
+
+#timer{
+    background: url("https://image.ibb.co/dMGTjp/timer_100.gif");
+    position:fixed;
+    opacity: 0.9;
+    width:100px;
+    height:100px;
+    left:40px;
+    top:570px;
+    display: flex;
+}
+
+#timer_numbers{
+    left:30px;
+    top:540px;
+    color:rgb(6, 23, 53);
+    font-weight: bold;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:18px;
+    border-left:30px;
+    padding-left:38px;
+    padding-top: 54px;
+    letter-spacing:-1px;
+}
