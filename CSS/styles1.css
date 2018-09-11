@@ -5,10 +5,12 @@
 
 html {
     overflow-y: hidden;
+    display:flex;
+    align-content: center;
 }
 
 #timer{
-    background: url("https://image.ibb.co/dMGTjp/timer_100.gif");
+    background: url("https://image.ibb.co/eOahS9/timer_100_halo.gif");
     position:fixed;
     opacity: 0.9;
     width:100px;
@@ -16,6 +18,7 @@ html {
     left:40px;
     top:570px;
     display: flex;
+    text-align: center;
 }
 
 #timer_numbers{
@@ -24,9 +27,11 @@ html {
     color:rgb(6, 23, 53);
     font-weight: bold;
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-	font-size:18px;
+    font-size:18px;
+    text-align: center;
     border-left:30px;
-    padding-left:38px;
+    padding-left:39.2px;
     padding-top: 54px;
     letter-spacing:-1px;
+    
 }
