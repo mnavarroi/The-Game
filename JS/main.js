@@ -9,13 +9,11 @@ var frames = 0;
 var loop = function() {
   
     if (controller.up && cookie.jumping == false) {
-  
       cookie.y_velocity -= 55; //Cuánto salta
       cookie.jumping = true;
-  
     }
   
-    //es la velocidad con la que camina este dude
+    //es la velocidad con la que camina la galleta
     if (controller.left) {
       cookie.x_velocity -= 1;
     }
@@ -24,7 +22,7 @@ var loop = function() {
       cookie.x_velocity += 1;
     }
   
-    cookie.y_velocity += 1.3;// gravedad. El valor original es 1.5, puse 1.2 para que llegue más fácil a las
+    cookie.y_velocity += 1.3;// gravedad. El valor original es 1.5, puse 1.2 para que llegue más fácil a los platos
     cookie.x += cookie.x_velocity;
     cookie.y += cookie.y_velocity;
     cookie.x_velocity *= 0.9;// fricción
@@ -63,25 +61,40 @@ window.requestAnimationFrame(loop);
 
 //Helpers
 
-// function intro(){
-//     interval = setInterval(function(){
-//         frames++;
-//        intro.draw();
-//     }, 1000/60);
-// }
-
 function start(){
     interval = setInterval(function(){
-        // frames++; //Tal vez esta línea no sirva
         
+/*     //Colisión con platos y galleta
+     posicionPlatos.forEach(function(item) {
+         colX = cookie.x - item.y;
+         coyY = cookie.y - item.x;
+        if  (colX == 0 && colY == 0)
+            cookie.jumping == false; 
+        // (this.x=200 || this.y=400);
+      }); */
+
+              
+    //Colisión con platos y galleta
+ /*     posicionPlatos.forEach(function(element) {
+        var xx = (cookie.x >= element.x + 300)
+        var yy = (cookie.y == element.y)
+        if  (xx == true && yy == true)
+            cookie.jumping == false; 
+            newcookie.y == cookie.y;
+
+      }); */
+
         fondo.draw();
         flecha.draw(); 
-       plato.draw();
-       cookie.draw();
-    //    chispa.draw();
-           
+        platos.draw();
+        cookie.draw();
+        chispas.draw();
+        cookie.colision();
     }, 1000/60);
-}
+    
+} 
+
+
 
 function restart(){
     if(interval !== undefined) return;
@@ -92,25 +105,32 @@ function restart(){
 
 function gameOver(){
     clearInterval(interval);
+    // board.music.pause() //Falta la música para activar esta función
     interval = undefined;
-    ctx.font = "200 28px Verdana"
-    ctx.fillText("The chocolate melted", 250, 200)
-    ctx.fillText("Press R to help Crispy again", 250, 240);
 }
 
 
-/*//draw Victory
+// function checkGameOver(){
+	// if(timeleft == 0) {
+		// gameOver()
+            // ctx.font = "200 28px Helvetica"
+            // ctx.fillText("The chocolate melted", width/2, height/2);
+            // ctx.fillText("Press R to help Crispy again", width/2, height/2 + 40);
+		// }
+
+
+/*//draw win
 if(status === 'win'){
     ctx.fillStyle = '#000';
     ctx.fillRect(0, 0, width, height);
     ctx.fillStyle = '#fff';
     ctx.font = '20pt Helvetica';
     ctx.textAlign = 'center';
-    ctx.fillText("VICTORY", width/2, height/2);
-    ctx.fillText("Press Space to Retry", width/2, height/2 + 40);
+    ctx.fillText("¡LO LOGRASTE!", width/2, height/2);
+    ctx.fillText("Presiona R para intentarlo de nuevo", width/2, height/2 + 40);
 }*/
 
-//ejemplo
+//ejemplo de restart
 // addEventListener('keydown', function(event){
 // if(event.keyCode === 13){
 //     ctx.clearRect(0,0,canvas.width,canvas.height)
@@ -119,13 +139,4 @@ if(status === 'win'){
 // }
 
 
-//mío
-// addEventListener("keydown", function(e){
-//     if(e.keyCode === 83){
-//         start();
-//     }
-// })
-
 start();
-
-// })

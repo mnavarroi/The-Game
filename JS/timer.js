@@ -1,4 +1,4 @@
-    var timeleft = 61;
+    var timeleft = 60;
     var timer = setInterval(function(){
     timeleft--;
     document.getElementById("timer_numbers").textContent = timeleft;

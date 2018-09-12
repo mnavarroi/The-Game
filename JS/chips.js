@@ -42,7 +42,7 @@ var posicionChispas = [
 ]
 
 
-class Chip{
+class Chips{
     constructor (){
         this.x=600;
         this.y=165;
@@ -69,4 +69,4 @@ class Chip{
 
 }
 
-var chispa = new Chip();
+var chispas = new Chips();

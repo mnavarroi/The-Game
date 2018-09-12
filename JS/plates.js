@@ -17,7 +17,7 @@ var posicionPlatos = [
 //     { src: 'https://image.ibb.co/mkUhkK/plato3.png'}
 // ]
 
-class Plato{
+class Platos{
     constructor (){
         this.x=0;
         this.y=0;
@@ -45,6 +45,7 @@ class Plato{
 //         }
 // }
 
+    
 
     draw(){
         if(frames % 10 === 0) this.x -= 0;
@@ -54,7 +55,7 @@ class Plato{
         })
     }
 }
-var plato = new Plato();
+var platos = new Platos();
 
 /*
 class Platoamarillo{
