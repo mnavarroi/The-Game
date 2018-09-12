@@ -1,4 +1,4 @@
-//Parte de los controles
+// Parte de los controles
 
 var controller = {
 
