@@ -18,9 +18,9 @@ var posicionPlatos = [
 // ]
 
 class Platos{
-    constructor (){
-        this.x=0;
-        this.y=0;
+    constructor (x,y ){
+        this.x=x;
+        this.y=y;
         this.width=300;
         this.height=30;
         this.image = new Image ();
@@ -56,6 +56,13 @@ class Platos{
     }
 }
 var platos = new Platos();
+
+var p = [];
+posicionPlatos.forEach(pos => {
+    p.push(new Platos(pos.x, pos.y))
+})
+
+console.log(p);
 
 /*
 class Platoamarillo{

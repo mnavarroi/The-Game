@@ -66,23 +66,33 @@ function start(){
 
         fondo.draw();
         flecha.draw(); 
-        platos.draw();
+        //platos.draw();
         cookie.draw();
         // chispas.draw();
-        sobrePlatos();
+        drawPlatos();
+        //sobrePlatos();
     }, 1000/60);
     
 } 
-
+console.log( cookie.y_velocity);
 function sobrePlatos(){
     // for (var i=0; i<posicionPlatos.length; i++) {
         cookie.colision(posicionPlatos[0]);
         if (cookie.colision(posicionPlatos[0])){
-        cookie.y-=400
-        console.log(cookie.y)
+            cookie.y_velocity = 0;
+            console.log(cookie.y,  cookie.y_velocity)
         }
         // console.log(cookie.colision(posicionPlatos[0]))
     // }
+}
+
+function drawPlatos(){
+    p.forEach(plato => {
+        plato.draw();
+        if(cookie.colision(plato)){
+            console.log("perro")
+        }
+    })
 }
 
 
