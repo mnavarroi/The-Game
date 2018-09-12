@@ -88,12 +88,18 @@ function start(){
         flecha.draw(); 
         platos.draw();
         cookie.draw();
-        chispas.draw();
-        cookie.colision();
+        // chispas.draw();
+        sobrePlatos();
     }, 1000/60);
     
 } 
 
+function sobrePlatos(){
+    // for (var i=0; i<posicionPlatos.length; i++) {
+        cookie.colision(posicionPlatos[0]);
+        // console.log(cookie.colision(posicionPlatos[1]))
+    // }
+}
 
 
 function restart(){

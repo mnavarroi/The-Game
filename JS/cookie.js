@@ -14,20 +14,14 @@ class Cookie{
     }
 
     //Colisión con platos y galleta
-    colision() {
-        posicionPlatos.forEach( (element) => {
-
-            var xx = (this.x >= element.x + 300)
-            var yy = (this.y >= element.y)
-            console.log(xx, yy)
-            if  (xx && yy) {
-                console.log("entro al if")
-                this.y = element.y;
-            } else {
-                // console.log("no entra")
-            } 
-          });
+    colision(item){
+        var restrictions = this.x < item.x || 
+                            this.x > item.x + 300 ||
+                            this.y < item.y ||
+                            this.y > item.y + 30;
+        return !restrictions;
     }
+
     draw() {
         ctx.drawImage(this.image1, this.x, this.y, this.width, this.height);
                 
