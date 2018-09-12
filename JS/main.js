@@ -29,10 +29,10 @@ var loop = function() {
     cookie.y_velocity *= 0.9;// fricción
   
     // línea base
-    if (cookie.y > 530 - 38 - 40) {
+    if (cookie.y > 452) {
   
       cookie.jumping = false;
-      cookie.y = 530 - 38 - 40;
+      cookie.y = 452;
       cookie.y_velocity = 0;
   
     }
@@ -62,27 +62,7 @@ window.requestAnimationFrame(loop);
 //Helpers
 
 function start(){
-    interval = setInterval(function(){
-        
-/*     //Colisión con platos y galleta
-     posicionPlatos.forEach(function(item) {
-         colX = cookie.x - item.y;
-         coyY = cookie.y - item.x;
-        if  (colX == 0 && colY == 0)
-            cookie.jumping == false; 
-        // (this.x=200 || this.y=400);
-      }); */
-
-              
-    //Colisión con platos y galleta
- /*     posicionPlatos.forEach(function(element) {
-        var xx = (cookie.x >= element.x + 300)
-        var yy = (cookie.y == element.y)
-        if  (xx == true && yy == true)
-            cookie.jumping == false; 
-            newcookie.y == cookie.y;
-
-      }); */
+    interval = setInterval(function(){ 
 
         fondo.draw();
         flecha.draw(); 
@@ -97,7 +77,11 @@ function start(){
 function sobrePlatos(){
     // for (var i=0; i<posicionPlatos.length; i++) {
         cookie.colision(posicionPlatos[0]);
-        // console.log(cookie.colision(posicionPlatos[1]))
+        if (cookie.colision(posicionPlatos[0])){
+        cookie.y-=400
+        console.log(cookie.y)
+        }
+        // console.log(cookie.colision(posicionPlatos[0]))
     // }
 }
 
