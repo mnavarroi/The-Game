@@ -115,7 +115,7 @@ function pararFondo(){
     // console.log(cookie.y )
     if(fondo.y > -100 || 
         cookie.y + 2 > 494) {
-            if(-2183 < fondo.y ) {
+            if(-2183 < fondo.y && cookie.y + 2 > 494) {
                 gameOver();
                 
             }
