@@ -54,10 +54,12 @@ function gameOver() {
     console.log('pierdes')
 
     clearInterval(interval);
-    ctx.font = "30px Avenir"
-    ctx.fillText("Oh no, se derritieron todas las chispas", 1250, 200)
-    ctx.fillText("Presiona Enter para intentarlo de nuevo", 1250, 240);    
-}
+    $("canvas").css("display", "none");
+    $("body").text(`You lost! try again`);
+//     ctx.font = "30px Avenir"
+//     ctx.fillText("Oh no, se derritieron todas las chispas", 1250, 200)
+//     ctx.fillText("Presiona Enter para intentarlo de nuevo", 1250, 240);    
+ }
     
     
     /*  if (timeleft() <= 0)
