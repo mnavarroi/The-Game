@@ -1,5 +1,6 @@
 var canvas = document.getElementById('full-canvas');
 var ctx= canvas.getContext('2d');
+
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 var cookie = new Cookie();
@@ -8,6 +9,7 @@ var plato = new Plato();
 var fondo = new Background();
 var frames = 0;
 var fondoCae = false;
+var score = 0;
 
 var audios = {
     game: "http://k003.kiwi6.com/hotlink/13nrs27rt0/juego.mp3",
@@ -37,6 +39,7 @@ function update() {
     drawPlatos();
     cookie.draw();
     reaparecer();
+    tiempoOver();
 
     // timer();
     // console.log(fondo.y)
@@ -61,6 +64,13 @@ function gameOver() {
 //     ctx.fillText("Presiona Enter para intentarlo de nuevo", 1250, 240);    
  }
     
+
+ function ganar (){
+
+    clearInterval(interval);
+    $("canvas").css("display", "none");
+    $("body").text('You win! Your score is: ' + score );
+}
     
     /*  if (timeleft() <= 0)
     console.log("timer jala")
@@ -70,7 +80,11 @@ function gameOver() {
     ctx.fillText("Presiona Enter para intentarlo de nuevo", 250, 240); */
     
     
+function tiempoOver(){
+    if (timeleft ===0)
+    ganar();
 
+}
 
 function cookieLeft (){
     cookie.x-=6;
@@ -144,12 +158,17 @@ function pararFondo(){
             chispa.draw();
             if(cookie.colision(chispa)){
                 ch.splice(index, 1);
+                score ++;
+                // console.log(score)
                 return false;
+                
                 
             }
             
         })
     }
+
+  
     
     /* function drawChispas(){
         ch.forEach(chispa => {
