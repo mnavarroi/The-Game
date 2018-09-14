@@ -140,12 +140,10 @@ function pararFondo(){
     }
     
     function drawChispas(){
-        ch.forEach(chispa => {
+        ch.forEach((chispa, index) => {
             chispa.draw();
             if(cookie.colision(chispa)){
-                cookie.y = chispa.y - cookie.height;
-                cookie.x = chispa.x - cookie.width;
-                console.log ("toca la chispa");
+                ch.splice(index, 1);
                 return false;
                 
             }
