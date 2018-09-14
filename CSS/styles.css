@@ -135,3 +135,13 @@ h3{
   color: grey;
   cursor: pointer;
 }
+
+.container{
+    position: relative;
+}
+
+.game-over{
+
+    position: absolute;
+    background-color: rgba(0,0,0.0.7);
+}

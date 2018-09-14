@@ -5,7 +5,9 @@ class Background{
         this.width = 1300;
         this.height = 2890;
         this.image = new Image();
-        this.image.src = 'https://image.ibb.co/hRwHXz/Background.png';
+        this.image.src = 'https://image.ibb.co/dQABaU/Background_1.png';
+       /*  this.music = new Audio ()
+	    this.music.src = "http://k003.kiwi6.com/hotlink/13nrs27rt0/juego.mp3" */
     }
 
     draw(){
@@ -14,20 +16,3 @@ class Background{
 }
 
 var fondo = new Background();
-
-class Arrow{
-    constructor(){
-        this.x= 1000;
-        this.y= 340;
-        this.width = 170;
-        this.height = 300;
-        this.image = new Image();
-        this.image.src = 'https://image.ibb.co/gGkQfU/arrow.png';
-    }
-
-    draw(){
-        ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
-    }
-}
-
-var flecha = new Arrow();
