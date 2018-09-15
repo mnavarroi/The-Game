@@ -6,7 +6,11 @@
 html {
     overflow-y: hidden;
     display:flex;
-    align-content: center;
+    justify-content: center;
+}
+
+#full-canvas{
+    width: 1200;
 }
 
 #timer{
