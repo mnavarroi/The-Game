@@ -87,7 +87,9 @@ function pararFondo(){
 
 
 function gameOver(){
-    if(pararFondo === false);
+    if(pararFondo === true);
+    fondo.music.pause();
+
     clearInterval(interval);
     console.log("muerte")
     ctx.font = "30px Avenir"
