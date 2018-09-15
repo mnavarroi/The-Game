@@ -1,17 +1,17 @@
-class Cookie{
+class Kronk{
     
     constructor (){
         // this.x=x;
         // this.y=y;
         this.width=143;
         this.height=208;
-        this.x=550;
+        this.x=900;
         this.y=fondo.y+fondo.height-this.height-10;
         this.jumping=true,
         this.x_velocity=10,
         this.y_velocity=10,
         this.image = new Image();
-        this.image.src = 'https://image.ibb.co/kL2AKe/stand.png'; 
+        this.image.src = 'https://image.ibb.co/gEnSNK/stand_k_2.png'; 
     }
     
     colision(item){
@@ -46,7 +46,7 @@ class Cookie{
         if (this.y + this.height < canvas.height){
             this.y+=this.y_velocity;
         } else {
-            cookie.jumping = true;
+            kronk.jumping = true;
         }
         
         ctx.drawImage(this.image, this.x, this.y, this.width, this.height);   
