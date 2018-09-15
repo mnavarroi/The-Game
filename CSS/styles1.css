@@ -9,9 +9,9 @@ html {
     justify-content: center;
 }
 
-#full-canvas{
+/* #full-canvas{
     width: 1200;
-}
+} */
 
 #timer{
     background: url("https://image.ibb.co/eOahS9/timer_100_halo.gif");
@@ -38,4 +38,23 @@ html {
     padding-top: 54px;
     letter-spacing:-1px;
     
+}
+
+
+.win {
+    width: 800px;
+    height: 450px;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fafafa;
+    align-items: center;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#next-level {
+    width: 200px;
 }
